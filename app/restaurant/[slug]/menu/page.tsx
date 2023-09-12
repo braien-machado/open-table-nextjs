@@ -1,12 +1,10 @@
-import NavBar from '../../../components/NavBar';
 import Header from '../components/Header';
 import Menu from '../components/Menu';
 import RestaurantNavBar from '../components/RestaurantNavBar';
 
 export default function RestaurantMenu() {
   return (
-    <main className="max-w-screen-2xl m-auto bg-white">
-      <NavBar />
+    <>
       <Header />
       <div className="flex m-auto w-2/3 justify-between items-start -mt-11">
         <div className="bg-white w-full rounded p-3 shadow">
@@ -14,6 +12,6 @@ export default function RestaurantMenu() {
           <Menu />
         </div>
       </div>
-    </main>
+    </>
   );
 }
