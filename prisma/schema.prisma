@@ -27,6 +27,8 @@ model Restaurant {
   cuisine     Cuisine  @relation(fields: [cuisine_id], references: [id])
   created_at  DateTime  @default(now())
   updated_at  DateTime  @updatedAt
+
+  @@map("restaurant")
 }
 
 model Item {
@@ -38,6 +40,8 @@ model Item {
   restaurant    Restaurant @relation(fields: [restaurant_id], references: [id])
   created_at    DateTime    @default(now())
   updated_at    DateTime    @updatedAt
+
+  @@map("item")
 }
 
 model Location {
@@ -46,6 +50,8 @@ model Location {
   restaurants Restaurant[]
   created_at  DateTime      @default(now())
   updated_at  DateTime      @updatedAt
+
+  @@map("location")
 }
 
 model Cuisine {
@@ -54,6 +60,8 @@ model Cuisine {
   restaurants Restaurant[]
   created_at  DateTime      @default(now())
   updated_at  DateTime      @updatedAt
+
+  @@map("cuisine")
 }
 
 enum PRICE {
